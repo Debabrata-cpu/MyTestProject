@@ -13,21 +13,21 @@ public class Main {
 
     }
 
-    static void hasDuplicate(String s){
-        HashSet hs  = new HashSet<>();
+    static void hasDuplicate(String s) {
+        HashSet hs = new HashSet<>();
         char[] charArray = s.toCharArray();
-        for(char c: charArray){
-         if(hs.contains(c)){
-             System.out.println("Duplicates present");
-             return;
-         }
-         hs.add(c);
+        for (char c : charArray) {
+            if (hs.contains(c)) {
+                System.out.println("Duplicates present");
+                return;
+            }
+            hs.add(c);
         }
         System.out.println("no Duplicates");
 
     }
 
-    static void validAnagram(String s1, String s2){
+    static void validAnagram(String s1, String s2) {
         if (s1.length() != s2.length()) {
             System.out.println("Not valid anagram");
             return;
@@ -46,6 +46,9 @@ public class Main {
             }
         }
         System.out.println("valid anagram");
-        
+
+
     }
+
+
 }
