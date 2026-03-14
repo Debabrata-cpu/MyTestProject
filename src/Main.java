@@ -10,6 +10,7 @@ public class Main {
         System.out.println("Hello and welcome!");
         hasDuplicate("123");
         validAnagram("car", "racs");
+        maxSubArray(new Integer[]{1, 2, 4, -1, -3, 5});
 
     }
 
@@ -48,6 +49,28 @@ public class Main {
         System.out.println("valid anagram");
 
 
+    }
+
+    // arr = {1,2,4,-1,-3,5}
+
+    static int maxSubArray(Integer[] arr) {
+
+        int totalSum = arr[0];
+        int currentSum =arr[0];
+        for (int i = 1; i < arr.length; i++) {
+
+            if (currentSum < 0) {
+                currentSum = 0;
+            }
+            currentSum = currentSum + arr[i];
+            if (currentSum > totalSum) {
+                totalSum = currentSum;
+            }
+
+
+        }
+        System.out.println("max sub array"+ totalSum);
+        return totalSum;
     }
 
 
